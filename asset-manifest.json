@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react-frontend-challenge/static/css/main.58ae495c.chunk.css",
+    "main.js": "/react-frontend-challenge/static/js/main.0453323c.chunk.js",
+    "main.js.map": "/react-frontend-challenge/static/js/main.0453323c.chunk.js.map",
+    "runtime~main.js": "/react-frontend-challenge/static/js/runtime~main.1149f780.js",
+    "runtime~main.js.map": "/react-frontend-challenge/static/js/runtime~main.1149f780.js.map",
+    "static/css/2.266e55a5.chunk.css": "/react-frontend-challenge/static/css/2.266e55a5.chunk.css",
+    "static/js/2.02165781.chunk.js": "/react-frontend-challenge/static/js/2.02165781.chunk.js",
+    "static/js/2.02165781.chunk.js.map": "/react-frontend-challenge/static/js/2.02165781.chunk.js.map",
+    "index.html": "/react-frontend-challenge/index.html",
+    "precache-manifest.3cf5e58267e1b4a1b58692d020a1253c.js": "/react-frontend-challenge/precache-manifest.3cf5e58267e1b4a1b58692d020a1253c.js",
+    "service-worker.js": "/react-frontend-challenge/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/react-frontend-challenge/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.58ae495c.chunk.css.map": "/react-frontend-challenge/static/css/main.58ae495c.chunk.css.map",
+    "static/media/1.png": "/react-frontend-challenge/static/media/1.238d2dac.png",
+    "static/media/2.png": "/react-frontend-challenge/static/media/2.3a73a154.png",
+    "static/media/3.png": "/react-frontend-challenge/static/media/3.735b9d58.png",
+    "static/media/4.png": "/react-frontend-challenge/static/media/4.7d042452.png"
+  }
+}
