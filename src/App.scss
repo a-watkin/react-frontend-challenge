@@ -1,0 +1,179 @@
+// Colours
+$background-colour: #222222;
+$ready-colour: #49d5b0;
+$dispatched-colour: #65a9e8;
+$in-queue-colour: #fd682f;
+$out-of-stock-colour: #fd0101;
+$font-colour: #949598;
+$bright-font: #f0f0f0;
+
+$spacing: 12px;
+$gradient-colour: linear-gradient(180deg, #626262, #6e6e6e);
+$initials-box: 50px;
+
+$small-circle: 6px;
+$large-circle: 18px;
+
+$border-rounding: 6px;
+
+@mixin border() {
+  border: 1px solid $font-colour;
+  border-image-slice: 1;
+  border-radius: $border-rounding;
+}
+
+@mixin button-border() {
+  border: 1px solid $bright-font;
+  border-image-slice: 1;
+  // border-radius: $border-rounding;
+}
+
+@mixin status-border($colour) {
+  border-left: 12px solid $colour;
+  border-radius: $border-rounding - 1.5;
+}
+
+body {
+  background-color: $background-colour;
+  color: $font-colour;
+}
+
+.card {
+  color: $font-colour;
+  display: flex;
+  background-color: $background-colour;
+  margin-top: $spacing;
+
+  @include border;
+
+  .card-body {
+    word-break: break-word;
+    padding: $spacing;
+  }
+
+  .ready-to-try {
+    @include status-border($ready-colour);
+  }
+
+  .on-the-way {
+    @include status-border($dispatched-colour);
+  }
+
+  .out-of-stock {
+    @include status-border($out-of-stock-colour);
+  }
+
+  .in-the-queue {
+    @include status-border($in-queue-colour);
+  }
+
+  .product-name {
+    max-width: 6rem;
+    color: $bright-font;
+  }
+
+  .customer-initials-col {
+    max-width: 55px;
+  }
+
+  .customer-initials {
+    max-width: $initials-box;
+    min-width: $initials-box;
+    min-height: $initials-box;
+    padding-top: $spacing;
+    margin-top: 1rem;
+    color: $bright-font;
+    @include border;
+  }
+}
+
+.small-circle-btn {
+  height: $small-circle;
+  width: $small-circle;
+  border-radius: 50%;
+  display: inline-block;
+  text-decoration: none;
+  margin-right: $spacing;
+  background-color: $font-colour;
+}
+
+.large-circle-btn {
+  height: $large-circle;
+  width: $large-circle;
+  border-radius: 50%;
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 16px;
+  margin-right: 3px;
+  background-color: $ready-colour;
+}
+
+.btn-text {
+  text-transform: uppercase;
+  color: $font-colour;
+}
+
+.filter-button-container {
+  margin-top: $spacing;
+
+  .btn-text {
+    font-size: 12px;
+    vertical-align: 3px;
+  }
+
+  .ready-to-try {
+    @include button-border;
+    background-color: $ready-colour;
+  }
+
+  .out-of-stock {
+    @include button-border;
+    background-color: $out-of-stock-colour;
+  }
+
+  .on-the-way {
+    @include button-border;
+    background-color: $dispatched-colour;
+  }
+
+  .in-the-queue {
+    @include button-border;
+    background-color: $in-queue-colour;
+  }
+}
+
+.pagination-container {
+  margin-top: $spacing;
+}
+
+.vertical-line {
+  margin-left: 3px;
+  color: $font-colour;
+  border-left: 1px solid;
+  padding: 3px;
+}
+
+.page-number {
+  margin-right: 3px;
+  font-weight: bold;
+}
+
+.page-number-left {
+  color: $bright-font;
+}
+
+// Pagination button colour.
+.highlight {
+  @include button-border;
+  background-color: $ready-colour;
+}
+
+.highlight-filter {
+  color: $bright-font;
+}
+
+// Used by both filter and pagination buttons.
+.hover-pointer {
+  cursor: pointer;
+}
+

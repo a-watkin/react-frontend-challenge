@@ -1,0 +1,156 @@
+body {
+  background-color: #222222;
+  color: #949598;
+}
+
+.card {
+  color: #949598;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #222222;
+  margin-top: 12px;
+  border: 1px solid #949598;
+  border-image-slice: 1;
+  border-radius: 6px;
+}
+
+.card .card-body {
+  word-break: break-word;
+  padding: 12px;
+}
+
+.card .ready-to-try {
+  border-left: 12px solid #49d5b0;
+  border-radius: 4.5px;
+}
+
+.card .on-the-way {
+  border-left: 12px solid #65a9e8;
+  border-radius: 4.5px;
+}
+
+.card .out-of-stock {
+  border-left: 12px solid #fd0101;
+  border-radius: 4.5px;
+}
+
+.card .in-the-queue {
+  border-left: 12px solid #fd682f;
+  border-radius: 4.5px;
+}
+
+.card .product-name {
+  max-width: 6rem;
+  color: #f0f0f0;
+}
+
+.card .customer-initials-col {
+  max-width: 55px;
+}
+
+.card .customer-initials {
+  max-width: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  padding-top: 12px;
+  margin-top: 1rem;
+  color: #f0f0f0;
+  border: 1px solid #949598;
+  border-image-slice: 1;
+  border-radius: 6px;
+}
+
+.small-circle-btn {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 12px;
+  background-color: #949598;
+}
+
+.large-circle-btn {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 16px;
+  margin-right: 3px;
+  background-color: #49d5b0;
+}
+
+.btn-text {
+  text-transform: uppercase;
+  color: #949598;
+}
+
+.filter-button-container {
+  margin-top: 12px;
+}
+
+.filter-button-container .btn-text {
+  font-size: 12px;
+  vertical-align: 3px;
+}
+
+.filter-button-container .ready-to-try {
+  border: 1px solid #f0f0f0;
+  border-image-slice: 1;
+  background-color: #49d5b0;
+}
+
+.filter-button-container .out-of-stock {
+  border: 1px solid #f0f0f0;
+  border-image-slice: 1;
+  background-color: #fd0101;
+}
+
+.filter-button-container .on-the-way {
+  border: 1px solid #f0f0f0;
+  border-image-slice: 1;
+  background-color: #65a9e8;
+}
+
+.filter-button-container .in-the-queue {
+  border: 1px solid #f0f0f0;
+  border-image-slice: 1;
+  background-color: #fd682f;
+}
+
+.pagination-container {
+  margin-top: 12px;
+}
+
+.vertical-line {
+  margin-left: 3px;
+  color: #949598;
+  border-left: 1px solid;
+  padding: 3px;
+}
+
+.page-number {
+  margin-right: 3px;
+  font-weight: bold;
+}
+
+.page-number-left {
+  color: #f0f0f0;
+}
+
+.highlight {
+  border: 1px solid #f0f0f0;
+  border-image-slice: 1;
+  background-color: #49d5b0;
+}
+
+.highlight-filter {
+  color: #f0f0f0;
+}
+
+.hover-pointer {
+  cursor: pointer;
+}
+/*# sourceMappingURL=App.css.map */
