@@ -2,6 +2,7 @@
   "name": "beginners-frontend-react-challenge",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://a-watkin.github.io/react-frontend-challenge",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gh-pages": "^2.1.1",
