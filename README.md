@@ -14,7 +14,7 @@ I have also added a button to stop auto roatation but commented it out as it is 
 
 ## Live version
 
-[Live version of this code at github pages.]('https://a-watkin.github.io/react-frontend-challenge/')
+[Live version of this code at github pages.](https://a-watkin.github.io/react-frontend-challenge/)
 
 ---
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
