@@ -21,7 +21,8 @@ class App extends Component {
       maxPages: null,
       currentPage: 0,
       time: TIMEOUT,
-      humanClick: false
+      humanClick: false,
+      statuses: ['Ready to try', 'On the way', 'In the queue', 'Out of stock']
     }
   }
 
@@ -113,14 +114,13 @@ class App extends Component {
   }
 
   render() {
-    // Gets an array of unique statuses.
-    const statuses = [...new Set(this.state.data.map(item => item.Status))];
-    let pages = null;
-
+    let pages;
     // Gets an array of page numbers.
     if (this.state.maxPages) {
       pages = [...Array(this.state.maxPages).fill(null).map((x, i) => i)]
     }
+
+    const { statuses } = this.state;
 
     return (
 
