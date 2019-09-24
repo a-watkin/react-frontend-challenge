@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "386eae3fe8b379e6b3f733b307865519",
+    "revision": "f4d5c8c37ea875c76ee19fd5cbb4e0ea",
     "url": "/react-frontend-challenge/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-frontend-challenge/static/css/2.266e55a5.chunk.css"
   },
   {
-    "revision": "c64c2a7059d6da30e394",
-    "url": "/react-frontend-challenge/static/css/main.58ae495c.chunk.css"
+    "revision": "289f62a32cf0d4e2acad",
+    "url": "/react-frontend-challenge/static/css/main.5e01aaa1.chunk.css"
   },
   {
     "revision": "ac0e45907bfd6872d452",
     "url": "/react-frontend-challenge/static/js/2.02165781.chunk.js"
   },
   {
-    "revision": "c64c2a7059d6da30e394",
-    "url": "/react-frontend-challenge/static/js/main.0453323c.chunk.js"
+    "revision": "289f62a32cf0d4e2acad",
+    "url": "/react-frontend-challenge/static/js/main.e2299108.chunk.js"
   },
   {
     "revision": "8ff6afd70d1b619859f8",
