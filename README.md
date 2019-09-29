@@ -7,7 +7,7 @@ I used the names specified in the brief exactly as written, I'm not sure if this
 
 1. Clicking on a filtered result highlights the text that is filtered.
 2. Clicking on a highlighted filter de-filteres the results.
-3. Clickong on a filter stops auto rotation.
+3. Clicking on a filter stops auto rotation.
 
 I have also added a button to stop auto roatation but commented it out as it is not part of the requested layout.
 
