@@ -34,12 +34,20 @@ class App extends Component {
     return maxPages;
   }
 
+  startCountdown() {
+    this.interval = setInterval(() => this.setState({ time: this.state.time - 1 }), 1000);
+  }
+
+  stopCountdown() {
+    clearInterval(this.interval);
+  }
+
   componentDidMount() {
     this.setState({
       maxPages: this.getMaxPages(this.state.data)
     });
 
-    this.interval = setInterval(() => this.setState({ time: this.state.time - 1 }), 1000);
+    this.startCountdown();
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -61,7 +69,7 @@ class App extends Component {
     }
   }
 
-  handleResultFilter(filterBy) {
+  async handleResultFilter(filterBy) {
     let { currentFilter } = this.state;
 
     if (currentFilter === filterBy) {
@@ -69,28 +77,37 @@ class App extends Component {
         currentData: data.slice(0, 4),
         maxPages: this.getMaxPages(this.state.data),
         currentPage: 0,
-        currentFilter: null
+        currentFilter: null,
+        time: TIMEOUT
       })
+      this.startCountdown();
     } else {
+
+      if (this.state.time === 0) {
+        // this is really hacky
+        await this.handlePaginationClick();
+        // this has no effect
+        this.setState({
+          currentPage: 0
+        })
+      }
+      this.stopCountdown()
+
       let filteredData = this.state.data.filter((elem) => {
         return elem.Status === filterBy;
       });
 
+      let maxPages = this.getMaxPages(filteredData);
+
       this.setState({
         currentData: filteredData.slice(0, 4),
         filteredData,
-        currentPage: 0,
+        maxResults: 4,
         currentFilter: filterBy,
-        maxPages: this.getMaxPages(filteredData)
-      });
+        maxPages,
+        currentPage: 0
+      })
     }
-  }
-
-  handleAutoRotate() {
-    let { humanClick } = this.state;
-    this.setState({
-      humanClick: !humanClick
-    });
   }
 
   handlePaginationClick(page) {
@@ -110,6 +127,13 @@ class App extends Component {
     this.setState({
       currentData: data.slice(start, stop),
       currentPage: page
+    })
+  }
+
+  handleAutoRotate() {
+    let { humanClick } = this.state;
+    this.setState({
+      humanClick: !humanClick
     });
   }
 
@@ -123,7 +147,6 @@ class App extends Component {
     const { statuses } = this.state;
 
     return (
-
       // Filter buttons.
       <div className="container" >
         <div className="row filter-button-container">
@@ -216,6 +239,8 @@ class App extends Component {
 
         {/* Button for stopping auto rotation. */}
         {/* <button className="btn btn-primary" onClick={() => this.handleAutoRotate()}>Toggle autorotate</button> */}
+
+        {/* <h1>{this.state.time}</h1> */}
       </div >
     )
   }

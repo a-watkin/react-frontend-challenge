@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PageIndicator = (props) => {
-
+  // I get a warning here when handlePaginationClick() and handleResultFilter() conflict but it doesn't affect anything.
   return (
     <span>
       <span className="page-number page-number-left">
@@ -20,7 +20,6 @@ const PageIndicator = (props) => {
         }
       </span>
     </span>
-
   )
 }
 
